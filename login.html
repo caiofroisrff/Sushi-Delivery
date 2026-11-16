@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Entrar | Sushiiiiii</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Shippori+Mincho+B1:wght@700;800&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="geral.css">
+  <link rel="stylesheet" href="login.css">
+</head>
+<body>
+  <header>
+    <img id="logo" src="img/Sushiiiiii.png" alt="Sushiiiii">
+    <a href="index.html">Voltar ao cardápio</a>
+  </header>
+  <main>
+    <section class="conteiner">
+      <h1>Shhh. Pode entrar.</h1>
+      <p>Seu próximo pedido começa aqui.</p>
+      <form id="form-login" class="form">
+        <div class="box">
+          <div>
+            <label for="email">E-mail</label>
+            <div class="icon">
+              <input id="email" type="email" placeholder="seu@email.com" autocomplete="email" required>
+              <img src="img/mail.png" alt="">
+            </div>
+          </div>
+        </div>
+        <div class="box">
+          <div>
+            <label for="senha">Senha</label>
+            <div class="icon">
+              <input id="senha" type="password" placeholder="sua senha" autocomplete="current-password" required>
+              <img src="img/cadeado.png" alt="">
+            </div>
+          </div>
+        </div>
+        <div class="opcao">
+          <label class="checkbox" for="lembrar"><input id="lembrar" type="checkbox"> Lembrar de mim</label>
+          <a href="#">Esqueci minha senha</a>
+        </div>
+        <button type="submit">Entrar</button>
+      </form>
+      <p>Ainda não tem conta? <a class="cadastro barra" href="registro.html">Cadastre-se</a></p>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

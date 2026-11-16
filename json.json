@@ -1,0 +1,54 @@
+{
+  "usuarios": [
+    {
+      "id": 1,
+      "nome": "Maria Silva",
+      "email": "maria@email.com",
+      "senha": "hash_da_senha_segura",
+      "endereco": "Rua das Flores, 123 - Bairro Centro"
+    },
+    {
+      "id": 2,
+      "nome": "João Santos",
+      "email": "joao@email.com",
+      "senha": "hash_da_senha_segura",
+      "endereco": "Av. Principal, 456 - Bairro Jardim"
+    }
+  ],
+  "produtos": [
+    {
+      "id": 1,
+      "nome": "Pizza Margherita",
+      "preco": 45.00,
+      "categoria": "Pizzas"
+    },
+    {
+      "id": 2,
+      "nome": "Hambúrguer Artesanal",
+      "preco": 32.50,
+      "categoria": "Lanches"
+    },
+    {
+      "id": 3,
+      "nome": "Refrigerante 2L",
+      "preco": 12.00,
+      "categoria": "Bebidas"
+    }
+  ],
+  "pedidos": [
+    {
+      "id": 1,
+      "codigo_pedido": "PED-2026-001",
+      "nome_cliente": "Maria Silva",
+      "total": 57.00,
+      "status": "Em preparo"
+    },
+    {
+      "id": 2,
+      "codigo_pedido": "PED-2026-002",
+      "nome_cliente": "João Santos",
+      "total": 32.50,
+      "status": "Entregue"
+    }
+  ]
+}

@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sushiiiiii | Delivery de sushi feito na hora</title>
+  <meta name="description" content="Sushi fresco preparado na hora e entregue rápido na sua casa. Conheça o cardápio do Sushiiiiii." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Shippori+Mincho+B1:wght@700;800&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="geral.css" />
+  <link rel="stylesheet" href="index.css" />
+</head>
+<body>
+  <div class="carrinho">
+    <button id="abrir-carrinho" class="botao-carrinho" aria-label="Abrir carrinho">
+      <img class="icone-adaptavel" src="img/carrinho-de-compras.png" alt="">
+      <span id="contador-carrinho" hidden>0</span>
+    </button>
+    <aside id="menu-carrinho" class="carrinho-escondido" aria-label="Carrinho">
+      <div class="carrinho-topo">
+        <h2>Seu pedido</h2>
+        <button id="fechar-carrinho" class="botao-circular" aria-label="Fechar carrinho">
+          <img class="icone-adaptavel" src="img/excluir.png" alt="">
+        </button>
+      </div>
+      <ul id="itens-carrinho"></ul>
+      <div class="carrinho-total">
+        <span>Total</span>
+        <strong id="total-carrinho">R$ 0,00</strong>
+      </div>
+      <a id="finalizar-pedido" class="botao-primario botao-bloco" href="finalizar.html">Finalizar pedido</a>
+    </aside>
+  </div>
+
+  <menu>
+    <li><a href="index.html"><img src="img/Sushiiiiii.png" alt="Sushiiiii"></a></li>
+    <div class="transform">
+      <li id="title"><a href="index.html">Sushiiiii</a></li>
+      <li><a class="menu_hover cor" href="cardapio.html">Cardápio</a></li>
+      <li><a class="menu_hover cor" href="#instrucao">Como funciona</a></li>
+      <li><a class="menu_hover cor" href="#sobre">Sobre</a></li>
+      <li><a class="menu_hover cor" href="#contato">Contato</a></li>
+      <li class="item-cadastro"><a class="menu_hover cor" href="login.html">Cadastre-se</a></li>
+      <li class="item-perfil" hidden><a class="menu_hover" href="perfil.html" aria-label="Meu perfil"><img class="icone-perfil icone-adaptavel" src="img/usuario.png" alt=""></a></li>
+      <li class="item-sair" hidden><a class="menu_hover cor link-sair" href="#">Sair</a></li>
+      <button class="botao-tema" aria-label="Alternar tema">
+        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.985 12.486a9 9 0 1 1-9.473-9.472c.405-.022.617.46.402.803a6 6 0 0 0 8.268 8.268c.344-.215.825-.004.803.401"></path></svg>
+      </button>
+      <a href="cardapio.html"><button id="pedido">Pedir agora</button></a>
+    </div>
+    <a href="perfil.html" class="item-perfil icone-perfil-mobile" hidden aria-label="Meu perfil"><img class="icone-perfil icone-adaptavel" src="img/usuario.png" alt=""></a>
+    <button id="abrir-menu" class="menu-responsivo" aria-label="Abrir menu">
+      <img class="icone-adaptavel" src="img/menu-aberto.png" alt="">
+    </button>
+  </menu>
+
+  <nav id="menu-lateral" class="menu-lateral" aria-label="Menu principal">
+    <div class="topo-menu">
+      <button class="botao-tema" aria-label="Alternar tema">
+        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.985 12.486a9 9 0 1 1-9.473-9.472c.405-.022.617.46.402.803a6 6 0 0 0 8.268 8.268c.344-.215.825-.004.803.401"></path></svg>
+      </button>
+      <button id="fechar-menu" class="botao-circular" aria-label="Fechar menu">
+        <img class="icone-adaptavel" src="img/excluir.png" alt="">
+      </button>
+    </div>
+    <ul class="lista-menu">
+      <li><a class="cor" href="cardapio.html">Cardápio</a></li>
+      <li><a class="cor" href="#instrucao">Como funciona</a></li>
+      <li><a class="cor" href="#sobre">Sobre</a></li>
+      <li><a class="cor" href="#contato">Contato</a></li>
+      <li class="item-cadastro"><a class="cor" href="login.html">Cadastre-se</a></li>
+      <li class="item-perfil" hidden><a href="perfil.html">Meu perfil</a></li>
+      <li class="item-sair" hidden><a class="cor link-sair" href="#">Sair</a></li>
+    </ul>
+  </nav>
+  <div id="fundo-menu" class="fundo-menu"></div>
+
+  <main id="inicio">
+    <section class="apresentacao">
+      <h1>Shhh. <br> O sushi <br> chegou.</h1>
+      <div class="destaque"></div>
+      <h3 class="cor">Peças preparadas na hora, com peixe fresco e arroz no ponto. <br> Você pede, a gente entrega.</h3>
+      <a href="cardapio.html"><button class="btn" id="pedido-2">Fazer pedido</button></a>
+      <a href="cardapio.html"><button class="btn" id="cardapio">Ver cardápio</button></a>
+    </section>
+
+    <section class="inicio">
+      <div id="circulo"></div>
+      <div id="sushi_img">
+        <img src="img/sushiP.jpg" alt="Sushi fresco">
+      </div>
+    </section>
+  </main>
+
+  <div class="faixa_preta_palavras_loop">
+    <div class="loop_infinito_palavras">
+      <span class="palavras_loop">Uramaki <span class="ponto-separadora-palavra"></span></span>
+      <span class="palavras_loop">Niguiri <span class="ponto-separadora-palavra"></span></span>
+      <span class="palavras_loop">Hot roll <span class="ponto-separadora-palavra"></span></span>
+      <span class="palavras_loop">Temaki <span class="ponto-separadora-palavra"></span></span>
+      <span class="palavras_loop">Sashimi <span class="ponto-separadora-palavra"></span></span>
+      <span class="palavras_loop">Combinados <span class="ponto-separadora-palavra"></span></span>
+
+      <span class="palavras_loop">Uramaki <span class="ponto-separadora-palavra"></span></span>
+      <span class="palavras_loop">Niguiri <span class="ponto-separadora-palavra"></span></span>
+      <span class="palavras_loop">Hot roll <span class="ponto-separadora-palavra"></span></span>
+      <span class="palavras_loop">Temaki <span class="ponto-separadora-palavra"></span></span>
+      <span class="palavras_loop">Sashimi <span class="ponto-separadora-palavra"></span></span>
+      <span class="palavras_loop">Combinados <span class="ponto-separadora-palavra"></span></span>
+    </div>
+  </div>
+
+  <section id="cardapio-carrossel" class="secao_favoritos">
+    <div class="conteiner_favoritos">
+      <header class="cabecalho-favoritos">
+        <h1 class="titulo_favoritos">Os favoritos<br>da casa</h1>
+        <p class="descricao_favoritos">Uma seleção do que mais sai por aqui. Arraste para o lado e escolha o seu.</p>
+      </header>
+
+      <div class="area_carrossel">
+        <div class="trilho_carrossel">
+          <div class="cartao_prato">
+            <a href="cardapio.html"><img class="imagem_prato" src="img/sushi.jfif" alt="Hot Philadelphia"></a>
+            <div class="detalhes_prato">
+              <div>
+                <h3 class="nome_prato">Hot Philadelphia</h3>
+                <p class="descricao_prato">8 peças empanadas com cream cheese</p>
+              </div>
+              <span class="preco_prato">R$ 34</span>
+            </div>
+          </div>
+
+          <div class="cartao_prato">
+            <a href="cardapio.html"><img class="imagem_prato" src="img/sushi2.jfif" alt="Niguiri Salmão"></a>
+            <div class="detalhes_prato">
+              <div>
+                <h3 class="nome_prato">Niguiri Salmão</h3>
+                <p class="descricao_prato">3 peças de salmão fresco sobre arroz</p>
+              </div>
+              <span class="preco_prato">R$ 24</span>
+            </div>
+          </div>
+
+          <div class="cartao_prato">
+            <a href="cardapio.html"><img class="imagem_prato" src="img/sushi3.jfif" alt="Uramaki Salmão"></a>
+            <div class="detalhes_prato">
+              <div>
+                <h3 class="nome_prato">Uramaki Salmão</h3>
+                <p class="descricao_prato">8 peças com salmão, pepino e gergelim</p>
+              </div>
+              <span class="preco_prato">R$ 32</span>
+            </div>
+          </div>
+
+          <div class="cartao_prato">
+            <a href="cardapio.html"><img class="imagem_prato" src="img/sushi4.jfif" alt="Sashimi Salmão"></a>
+            <div class="detalhes_prato">
+              <div>
+                <h3 class="nome_prato">Sashimi Salmão</h3>
+                <p class="descricao_prato">10 fatias finas sobre folha de shissô</p>
+              </div>
+              <span class="preco_prato">R$ 42</span>
+            </div>
+          </div>
+
+          <div class="cartao_prato">
+            <a href="cardapio.html"><img class="imagem_prato" src="img/sushi5.jfif" alt="Temaki Salmão"></a>
+            <div class="detalhes_prato">
+              <div>
+                <h3 class="nome_prato">Temaki Salmão</h3>
+                <p class="descricao_prato">Cone de alga com salmão e cebolinha</p>
+              </div>
+              <span class="preco_prato">R$ 29</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="controles_carrossel">
+        <button class="botao_navegacao" aria-label="Anterior">‹</button>
+        <div class="indicadores_passo">
+          <button class="ponto_indicador ativo" aria-label="Ir para item 1"></button>
+          <button class="ponto_indicador" aria-label="Ir para item 2"></button>
+          <button class="ponto_indicador" aria-label="Ir para item 3"></button>
+          <button class="ponto_indicador" aria-label="Ir para item 4"></button>
+          <button class="ponto_indicador" aria-label="Ir para item 5"></button>
+        </div>
+        <button class="botao_navegacao" aria-label="Próximo">›</button>
+      </div>
+    </div>
+  </section>
+
+  <section id="instrucao">
+    <h1>Simple assim</h1>
+    <div class="passo_passo">
+      <h1 class="numero">01</h1>
+      <h3>Escolha</h3>
+      <p class="cor">Navegue pelo cardápio e monte o seu pedido do seu jeito.</p>
+    </div>
+    <div class="passo_passo">
+      <h1 class="numero">02</h1>
+      <h3>Peça</h3>
+      <p class="cor">Finalize pelo WhatsApp em poucos toques, sem cadastro.</p>
+    </div>
+    <div class="passo_passo">
+      <h1 class="numero">03</h1>
+      <h3>Receba</h3>
+      <p class="cor">Preparamos na hora e entregamos embalado para chegar perfeito.</p>
+    </div>
+  </section>
+
+  <section id="sobre">
+    <div class="conteiner">
+      <div class="box-imagem">
+        <span id="quadrado"></span>
+        <img src="img/sushi3.jfif" alt="Sushi feito na hora" data-tilt data-tilt-max="15" data-tilt-speed="400">
+      </div>
+
+      <div class="conteudo">
+        <h1>Feito com calma,<br>entregue rápido</h1>
+        <p class="cor">No Sushiiiiii cada peça é montada no momento do pedido. Nada fica parado esperando: o peixe é cortado na hora, o arroz é temperado todo dia e a embalagem é pensada para a viagem até você.</p>
+        <ul class="lista-detalhes">
+          <li><span class="traco"></span>Peixe fresco selecionado</li>
+          <li><span class="traco"></span>Preparo na hora do pedido</li>
+          <li><span class="traco"></span>Embalagem que mantém a temperatura</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="contato">
+    <div class="conteiner-contato">
+      <h2>Bateu a fome?</h2>
+      <a class="botao_whats" href="https://wa.me/5511999999999" target="_blank" rel="noreferrer">Pedir pelo WhatsApp</a>
+    </div>
+  </section>
+
+  <footer>
+    <div class="conteiner_footer">
+      <div>
+        <div>
+          <img src="img/Sushiiiiii.png" alt="">
+          <h2>Sushiiiii</h2>
+        </div>
+        <p class="cor">Sushi feito na hora e entregue em silêncio, do jeito que tem que ser.</p>
+      </div>
+      <div>
+        <h4>Contato</h4>
+        <ul>
+          <li><img src="img/telephone.png" alt=""><p class="vermelho">(00) 00000-0000</p></li>
+          <li><img src="img/placeholder.png" alt=""><p class="cor">Rua Exemplo, 123, Centro</p></li>
+          <li><img src="img/clock.png" alt=""><p class="cor">Ter a Dom, 18h às 23h30</p></li>
+          <li><img src="img/instagram.png" alt=""><p class="vermelho">@sushiiiiii</p></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Legal</h4>
+        <ul>
+          <li><p class="vermelho">Política de Privacidade</p></li>
+          <li><p class="vermelho">Termos de Uso</p></li>
+        </ul>
+      </div>
+      <hr>
+      <div>
+        <p class="cor pequeno">© 2026 Sushiiiiii. Todos os direitos reservados.</p>
+        <p class="cor pequeno">Feito com arroz, peixe e paciência.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.1/vanilla-tilt.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

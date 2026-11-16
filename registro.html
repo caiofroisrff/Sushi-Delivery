@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cadastre-se | Sushiiiiii</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Shippori+Mincho+B1:wght@700;800&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="geral.css">
+  <link rel="stylesheet" href="login.css">
+</head>
+<body>
+  <header>
+    <img id="logo" src="img/Sushiiiiii.png" alt="Sushiiiii">
+    <a href="index.html">Voltar ao cardápio</a>
+  </header>
+  <main>
+    <section class="conteiner">
+      <h1>Shhh. Crie a Conta.</h1>
+      <form id="form-registro" class="form">
+        <div class="box">
+          <div>
+            <label for="nome">Nome</label>
+            <div class="icon">
+              <input id="nome" type="text" placeholder="Seu nome" autocomplete="name" required>
+              <img src="img/usuario.png" alt="">
+            </div>
+          </div>
+        </div>
+        <div class="box">
+          <div>
+            <label for="email">E-mail</label>
+            <div class="icon">
+              <input id="email" type="email" placeholder="seu@email.com" autocomplete="email" required>
+              <img src="img/mail.png" alt="">
+            </div>
+          </div>
+        </div>
+        <div class="box">
+          <div>
+            <label for="senha">Senha</label>
+            <div class="icon">
+              <input id="senha" type="password" placeholder="mínimo de 6 caracteres" autocomplete="new-password" required>
+              <img src="img/cadeado.png" alt="">
+            </div>
+          </div>
+        </div>
+        <div class="box">
+          <div>
+            <label for="cpf">CPF</label>
+            <div class="icon">
+              <input id="cpf" type="text" inputmode="numeric" placeholder="000.000.000-00" maxlength="14" required>
+              <img src="img/cadeado.png" alt="">
+            </div>
+          </div>
+        </div>
+        <div class="box">
+          <div>
+            <label for="telefone">Telefone</label>
+            <div class="icon">
+              <input id="telefone" type="tel" inputmode="tel" placeholder="(31) 99999-9999" maxlength="15" autocomplete="tel" required>
+              <img src="img/cadeado.png" alt="">
+            </div>
+          </div>
+        </div>
+        <div class="box">
+          <div>
+            <label for="endereco">Endereço</label>
+            <div class="icon">
+              <input id="endereco" type="text" placeholder="Rua, número - bairro" autocomplete="street-address" required>
+              <img src="img/mail.png" alt="">
+            </div>
+          </div>
+        </div>
+        <button type="submit">Criar conta</button>
+      </form>
+      <p>Já tem conta? <a class="cadastro barra" href="login.html">Entrar</a></p>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

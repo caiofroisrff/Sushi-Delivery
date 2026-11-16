@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Meu perfil | Sushiiiiii</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Shippori+Mincho+B1:wght@700;800&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="geral.css">
+</head>
+<body>
+  <menu>
+    <li><a href="index.html"><img src="img/Sushiiiiii.png" alt="Sushiiiii"></a></li>
+    <div class="transform">
+      <li id="title"><a href="index.html">Sushiiiii</a></li>
+      <li><a class="menu_hover cor" href="cardapio.html">Cardápio</a></li>
+      <li><a class="menu_hover cor" href="index.html#instrucao">Como funciona</a></li>
+      <li><a class="menu_hover cor" href="index.html#sobre">Sobre</a></li>
+      <li><a class="menu_hover cor" href="index.html#contato">Contato</a></li>
+      <li class="item-cadastro"><a class="menu_hover cor" href="login.html">Cadastre-se</a></li>
+      <li class="item-perfil" hidden><a class="menu_hover" href="perfil.html" aria-label="Meu perfil"><img class="icone-perfil icone-adaptavel" src="img/usuario.png" alt=""></a></li>
+      <li class="item-sair" hidden><a class="menu_hover cor link-sair" href="#">Sair</a></li>
+      <button class="botao-tema" aria-label="Alternar tema">
+        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.985 12.486a9 9 0 1 1-9.473-9.472c.405-.022.617.46.402.803a6 6 0 0 0 8.268 8.268c.344-.215.825-.004.803.401"></path></svg>
+      </button>
+      <a href="cardapio.html"><button id="pedido">Pedir agora</button></a>
+    </div>
+    <a href="perfil.html" class="item-perfil icone-perfil-mobile" hidden aria-label="Meu perfil"><img class="icone-perfil icone-adaptavel" src="img/usuario.png" alt=""></a>
+    <button id="abrir-menu" class="menu-responsivo" aria-label="Abrir menu">
+      <img class="icone-adaptavel" src="img/menu-aberto.png" alt="">
+    </button>
+  </menu>
+
+  <nav id="menu-lateral" class="menu-lateral" aria-label="Menu principal">
+    <div class="topo-menu">
+      <button class="botao-tema" aria-label="Alternar tema">
+        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.985 12.486a9 9 0 1 1-9.473-9.472c.405-.022.617.46.402.803a6 6 0 0 0 8.268 8.268c.344-.215.825-.004.803.401"></path></svg>
+      </button>
+      <button id="fechar-menu" class="botao-circular" aria-label="Fechar menu">
+        <img class="icone-adaptavel" src="img/excluir.png" alt="">
+      </button>
+    </div>
+    <ul class="lista-menu">
+      <li><a class="cor" href="cardapio.html">Cardápio</a></li>
+      <li><a class="cor" href="index.html#instrucao">Como funciona</a></li>
+      <li><a class="cor" href="index.html#sobre">Sobre</a></li>
+      <li><a class="cor" href="index.html#contato">Contato</a></li>
+      <li class="item-cadastro"><a class="cor" href="login.html">Cadastre-se</a></li>
+      <li class="item-perfil" hidden><a href="perfil.html">Meu perfil</a></li>
+      <li class="item-sair" hidden><a class="cor link-sair" href="#">Sair</a></li>
+    </ul>
+  </nav>
+  <div id="fundo-menu" class="fundo-menu"></div>
+
+  <main id="pagina-perfil" class="pagina">
+    <header class="cabecalho-pagina">
+      <span class="etiqueta">minha conta</span>
+      <h1>Olá, <span id="nome-usuario"></span></h1>
+    </header>
+
+    <div class="grade-pagina">
+      <section class="cartao-pagina">
+        <h2>Meus dados</h2>
+        <form id="form-perfil" class="acoes-pedido">
+          <div class="campo">
+            <label for="nome-perfil">Nome</label>
+            <input id="nome-perfil" type="text" required>
+          </div>
+          <div class="campo">
+            <label for="email-perfil">E-mail</label>
+            <input id="email-perfil" type="email" readonly>
+          </div>
+          <div class="campo">
+            <label for="endereco-perfil">Endereço</label>
+            <input id="endereco-perfil" type="text" required>
+          </div>
+          <div class="campo">
+            <label for="senha-perfil">Nova senha</label>
+            <input id="senha-perfil" type="password" placeholder="Deixe em branco para manter a atual" autocomplete="new-password">
+          </div>
+          <button type="submit" class="botao-primario">Salvar alterações</button>
+        </form>
+      </section>
+
+      <section class="cartao-pagina">
+        <h2>Meus pedidos</h2>
+        <div class="ferramentas-busca">
+          <input id="busca-pedidos" type="search" placeholder="Buscar por código, status ou valor">
+          <select id="filtro-status">
+            <option value="todos">Todos os status</option>
+            <option value="Em preparo">Em preparo</option>
+            <option value="Saiu para entrega">Saiu para entrega</option>
+            <option value="Entregue">Entregue</option>
+            <option value="Cancelado">Cancelado</option>
+          </select>
+        </div>
+        <p id="contagem-pedidos" class="cor">0 pedido(s) encontrado(s)</p>
+        <ul id="lista-pedidos" class="lista-pedidos"></ul>
+      </section>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

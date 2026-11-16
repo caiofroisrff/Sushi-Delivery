@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cardápio | Sushiiiiii</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Shippori+Mincho+B1:wght@700;800&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="geral.css">
+  <link rel="stylesheet" href="cardapio.css">
+</head>
+<body>
+  <div class="carrinho">
+    <button id="abrir-carrinho" class="botao-carrinho" aria-label="Abrir carrinho">
+      <img class="icone-adaptavel" src="img/carrinho-de-compras.png" alt="">
+      <span id="contador-carrinho" hidden>0</span>
+    </button>
+    <aside id="menu-carrinho" class="carrinho-escondido" aria-label="Carrinho">
+      <div class="carrinho-topo">
+        <h2>Seu pedido</h2>
+        <button id="fechar-carrinho" class="botao-circular" aria-label="Fechar carrinho">
+          <img class="icone-adaptavel" src="img/excluir.png" alt="">
+        </button>
+      </div>
+      <ul id="itens-carrinho"></ul>
+      <div class="carrinho-total">
+        <span>Total</span>
+        <strong id="total-carrinho">R$ 0,00</strong>
+      </div>
+      <a id="finalizar-pedido" class="botao-primario botao-bloco" href="finalizar.html">Finalizar pedido</a>
+    </aside>
+  </div>
+
+  <menu>
+    <li><a href="index.html"><img src="img/Sushiiiiii.png" alt="Sushiiiii"></a></li>
+    <div class="transform">
+      <li id="title"><a href="index.html">Sushiiiii</a></li>
+      <li><a class="menu_hover cor" href="cardapio.html">Cardápio</a></li>
+      <li><a class="menu_hover cor" href="index.html#instrucao">Como funciona</a></li>
+      <li><a class="menu_hover cor" href="index.html#sobre">Sobre</a></li>
+      <li><a class="menu_hover cor" href="index.html#contato">Contato</a></li>
+      <li class="item-cadastro"><a class="menu_hover cor" href="login.html">Cadastre-se</a></li>
+      <li class="item-perfil" hidden><a class="menu_hover" href="perfil.html" aria-label="Meu perfil"><img class="icone-perfil icone-adaptavel" src="img/usuario.png" alt=""></a></li>
+      <li class="item-sair" hidden><a class="menu_hover cor link-sair" href="#">Sair</a></li>
+      <button class="botao-tema" aria-label="Alternar tema">
+        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.985 12.486a9 9 0 1 1-9.473-9.472c.405-.022.617.46.402.803a6 6 0 0 0 8.268 8.268c.344-.215.825-.004.803.401"></path></svg>
+      </button>
+      <a href="cardapio.html"><button id="pedido">Pedir agora</button></a>
+    </div>
+    <a href="perfil.html" class="item-perfil icone-perfil-mobile" hidden aria-label="Meu perfil"><img class="icone-perfil icone-adaptavel" src="img/usuario.png" alt=""></a>
+    <button id="abrir-menu" class="menu-responsivo" aria-label="Abrir menu">
+      <img class="icone-adaptavel" src="img/menu-aberto.png" alt="">
+    </button>
+  </menu>
+
+  <nav id="menu-lateral" class="menu-lateral" aria-label="Menu principal">
+    <div class="topo-menu">
+      <button class="botao-tema" aria-label="Alternar tema">
+        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.985 12.486a9 9 0 1 1-9.473-9.472c.405-.022.617.46.402.803a6 6 0 0 0 8.268 8.268c.344-.215.825-.004.803.401"></path></svg>
+      </button>
+      <button id="fechar-menu" class="botao-circular" aria-label="Fechar menu">
+        <img class="icone-adaptavel" src="img/excluir.png" alt="">
+      </button>
+    </div>
+    <ul class="lista-menu">
+      <li><a class="cor" href="cardapio.html">Cardápio</a></li>
+      <li><a class="cor" href="index.html#instrucao">Como funciona</a></li>
+      <li><a class="cor" href="index.html#sobre">Sobre</a></li>
+      <li><a class="cor" href="index.html#contato">Contato</a></li>
+      <li class="item-cadastro"><a class="cor" href="login.html">Cadastre-se</a></li>
+      <li class="item-perfil" hidden><a href="perfil.html">Meu perfil</a></li>
+      <li class="item-sair" hidden><a class="cor link-sair" href="#">Sair</a></li>
+    </ul>
+  </nav>
+  <div id="fundo-menu" class="fundo-menu"></div>
+
+  <section class="hero-cardapio">
+    <div class="conteudo-hero">
+      <h5>cardápio</h5>
+      <h1>A melhor escolha <br> é feita em silêncio.</h1>
+      <p>Tudo preparado na hora. Escolha, adicione e finalize em poucos toques.</p>
+    </div>
+  </section>
+
+  <div id="barra">
+    <button class="botao ativo" data-filtro="todos">Todos</button>
+    <button class="botao" data-filtro="Hot Roll">Hot Roll</button>
+    <button class="botao" data-filtro="Niguiri">Niguiri</button>
+    <button class="botao" data-filtro="Temaki">Temaki</button>
+    <button class="botao" data-filtro="Combinados">Combinados</button>
+  </div>
+
+  <div class="ferramentas-produtos">
+    <input id="busca-produtos" type="search" placeholder="Buscar produto ou ingrediente" aria-label="Buscar produto">
+    <select id="ordenar-produtos" aria-label="Ordenar produtos">
+      <option value="padrao">Ordem padrão</option>
+      <option value="menor-preco">Menor preço</option>
+      <option value="maior-preco">Maior preço</option>
+      <option value="az">Nome (A-Z)</option>
+    </select>
+  </div>
+
+  <hr class="divisor">
+  <p id="contagem-produtos" class="resultado-busca"></p>
+
+  <main id="grade">
+    <div class="produto" data-categoria="Hot Roll" data-preco="34.00">
+      <img src="img/hot-CjGIYwp0.jpg" alt="Hot Philadelphia">
+      <div>
+        <h2>Hot Philadelphia</h2>
+        <p class="cor">8 peças empanadas com salmão e cream cheese</p>
+        <span class="vermelho">R$34,00</span>
+        <button class="btn-produto" data-id="1">+ Adicionar</button>
+      </div>
+    </div>
+    <div class="produto" data-categoria="Niguiri" data-preco="24.00">
+      <img src="img/niguiri-Dnn5OHD7.jpg" alt="Niguiri Salomão">
+      <div>
+        <h2>Niguiri Salomão</h2>
+        <p class="cor">3 peças de salmão fresco sobre arroz</p>
+        <span class="vermelho">R$24,00</span>
+        <button class="btn-produto" data-id="2">+ Adicionar</button>
+      </div>
+    </div>
+    <div class="produto" data-categoria="Temaki" data-preco="29.00">
+      <img src="img/temaki-DpDUEbKU.jpg" alt="Temaki Salmão">
+      <div>
+        <h2>Temaki Salmão</h2>
+        <p class="cor">Cone de alga com salmão, cebolinha e gergelim</p>
+        <span class="vermelho">R$29,00</span>
+        <button class="btn-produto" data-id="3">+ Adicionar</button>
+      </div>
+    </div>
+    <div class="produto" data-categoria="Combinados" data-preco="119.00">
+      <img src="img/combo-C9XvlFyt.jpg" alt="Combinado da Casa">
+      <div>
+        <h2>Combinado da Casa</h2>
+        <p class="cor">30 peças variadas para dividir</p>
+        <span class="vermelho">R$119,00</span>
+        <button class="btn-produto" data-id="4">+ Adicionar</button>
+      </div>
+    </div>
+    <div class="produto" data-categoria="Hot Roll" data-preco="31.00">
+      <img src="img/hot-CjGIYwp0.jpg" alt="Hot Skin">
+      <div>
+        <h2>Hot Skin</h2>
+        <p class="cor">8 peças com pele de salmão crocante</p>
+        <span class="vermelho">R$31,00</span>
+        <button class="btn-produto" data-id="5">+ Adicionar</button>
+      </div>
+    </div>
+    <div class="produto" data-categoria="Niguiri" data-preco="39.00">
+      <img src="img/niguiri-Dnn5OHD7.jpg" alt="Niguiri Trio">
+      <div>
+        <h2>Niguiri Trio</h2>
+        <p class="cor">6 peças: salmão, atum e peixe branco</p>
+        <span class="vermelho">R$39,00</span>
+        <button class="btn-produto" data-id="6">+ Adicionar</button>
+      </div>
+    </div>
+    <div class="produto" data-categoria="Temaki" data-preco="32.00">
+      <img src="img/temaki-DpDUEbKU.jpg" alt="Temaki Hot">
+      <div>
+        <h2>Temaki Hot</h2>
+        <p class="cor">Temaki empanado com salmão e cream cheese</p>
+        <span class="vermelho">R$32,00</span>
+        <button class="btn-produto" data-id="7">+ Adicionar</button>
+      </div>
+    </div>
+    <div class="produto" data-categoria="Combinados" data-preco="189.00">
+      <img src="img/combo-C9XvlFyt.jpg" alt="Combinado Silêncio">
+      <div>
+        <h2>Combinado Silêncio</h2>
+        <p class="cor">50 peças para a família toda</p>
+        <span class="vermelho">R$189,00</span>
+        <button class="btn-produto" data-id="8">+ Adicionar</button>
+      </div>
+    </div>
+  </main>
+
+  <p id="sem-resultados" hidden>Nenhum produto encontrado. Tente outro termo ou <button id="limpar-busca" class="botao-secundario">limpe os filtros</button>.</p>
+
+  <script src="script.js"></script>
+</body>
+</html>
